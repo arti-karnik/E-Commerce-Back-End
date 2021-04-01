@@ -17,14 +17,18 @@ ProductTag.init(
       references: {
         model: 'Product',
         key: 'id',
-      }
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE',
     },
     tag_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'Tag',
         key: 'id',
-      }
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE',
     }
     // define columns
   },

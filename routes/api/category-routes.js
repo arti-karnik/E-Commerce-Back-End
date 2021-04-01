@@ -15,9 +15,6 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-  console.log(req.params.id);
-  console.log("in");
-
   // find one category by its `id` value
   // be sure to include its associated Products
   try {
@@ -54,8 +51,19 @@ router.put('/:id', (req, res) => {
       id: req.params.id
   } 
   })
-  .then((categoryData) => {
-    res.json(categoryData);
+  .then(async (categoryData) => {
+    try {
+      const updatedCategoryData = await Category.findByPk(req.params.id, {
+        include: [{ model: Product, attributes: ['category_id']}]
+      }); 
+      if (!updatedCategoryData) {
+        res.status(404).json({ message: 'No Category found with this id!' });
+        return;
+      }
+      res.status(200).json(updatedCategoryData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
   })
   .catch((err) => {
     res.status(404).json({ message: 'Something wrong happened. Please check id and try again!' });

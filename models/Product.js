@@ -39,10 +39,10 @@ Product.init(
       references: {
         model: 'category',
         key: 'id',
-      }
+      },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE',
     }
-
-    // define columns
   },
   {
     sequelize,
