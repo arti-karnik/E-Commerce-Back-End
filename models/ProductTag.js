@@ -30,7 +30,6 @@ ProductTag.init(
       onUpdate: 'CASCADE',
       onDelete: 'CASCADE',
     }
-    // define columns
   },
   {
     sequelize,

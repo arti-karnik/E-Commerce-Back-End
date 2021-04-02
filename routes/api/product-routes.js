@@ -76,7 +76,6 @@ router.put('/:id', (req, res) => {
     .then(async (product) => {
       // find all associated tags from ProductTag
       const findAllProductsWithId = await ProductTag.findAll({ where: { product_id: req.params.id } });
-      console.log(findAllProductsWithId);
       if (findAllProductsWithId.length == 0) {
         res.status(200).json({ message: 'No Product found with this id!' });
         return;
@@ -107,7 +106,6 @@ router.put('/:id', (req, res) => {
       ]);
     })
     .then((updatedProductTags) => {
-      console.log(updatedProductTags);
       res.json(updatedProductTags);
     })
     .catch((err) => {
