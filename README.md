@@ -98,6 +98,5 @@ https://github.com/arti-karnik/E-Commerce-Back-End
 
 ## Application Walk-through
 https://drive.google.com/file/d/1P_LHeyXYdz-bCtFBbUG0dPZkm1z7T4Ht/view?usp=sharing
-https://drive.google.com/file/d/1RJ6uXCoyeleA9IOTV5wnyu5gaLeHdt9K/view?usp=sharing
-https://photos.app.goo.gl/msghykfBpKjVhMjx7
+
 
