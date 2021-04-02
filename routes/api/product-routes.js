@@ -28,11 +28,8 @@ router.get('/:id', async (req, res) => {
       res.status(404).json({ message: 'No Product found with this id!' });
       return;
     }
-
     res.status(200).json(productData);
   } catch (err) {
-    console.log(err);
-
     res.status(500).json(err);
   }
 });
@@ -64,7 +61,6 @@ router.post('/', (req, res) => {
 })
 .then((productTagIds) => res.status(200).json(productTagIds))
 .catch((err) => {
-  console.log(err);
   res.status(400).json(err);
 });
 });
@@ -77,9 +73,15 @@ router.put('/:id', (req, res) => {
       id: req.params.id,
     },
   })
-    .then((product) => {
+    .then(async (product) => {
       // find all associated tags from ProductTag
-      return ProductTag.findAll({ where: { product_id: req.params.id } });
+      const findAllProductsWithId = await ProductTag.findAll({ where: { product_id: req.params.id } });
+      console.log(findAllProductsWithId);
+      if (findAllProductsWithId.length == 0) {
+        res.status(404).json({ message: 'No Product found with this id!' });
+        return;
+      }
+      return findAllProductsWithId;
     })
     .then((productTags) => {
       // get list of current tag_ids
@@ -104,9 +106,11 @@ router.put('/:id', (req, res) => {
         ProductTag.bulkCreate(newProductTags),
       ]);
     })
-    .then((updatedProductTags) => res.json(updatedProductTags))
+    .then((updatedProductTags) => {
+      console.log(updatedProductTags);
+      res.json(updatedProductTags);
+    })
     .catch((err) => {
-      // console.log(err);
       res.status(400).json(err);
     });
 });
