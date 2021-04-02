@@ -51,12 +51,12 @@ Create a back-end for E-commerce application to demonstrate routes in Insomnia.
 Install NodeJS 
 
 ## demo
-![](GET.gif)
-![](POST.gif)
-![](PUT.gif)
-![](DELETE.gif)
-
 <img src="./assets/SS1.png">
+
+![](./assets/GET.gif?raw=true)
+![](./assets/POST.gif?raw=true)
+![](./assets/PUT.gif?raw=true)
+![](./assets/DELETE.gif?raw=true)
 
 ## Technologyused:
 <ul>
