@@ -22,9 +22,8 @@ router.get('/:id', async (req, res) => {
       include: [{ model: Product, attributes: ['category_id']}]
     });
 
-    console.log(categoryData);
     if (!categoryData) {
-      res.status(404).json({ message: 'No Category found with this id!' });
+      res.status(200).json({ message: 'No Category found with this id!' });
       return;
     }
     res.status(200).json(categoryData);
@@ -52,12 +51,16 @@ router.put('/:id', (req, res) => {
   } 
   })
   .then(async (categoryData) => {
+    if (!categoryData) {
+      res.status(200).json({ message: 'No Category found with this id!' });
+      return;
+    }
     try {
       const updatedCategoryData = await Category.findByPk(req.params.id, {
         include: [{ model: Product, attributes: ['category_id']}]
       }); 
       if (!updatedCategoryData) {
-        res.status(404).json({ message: 'No Category found with this id!' });
+        res.status(200).json({ message: 'No Category found with this id!' });
         return;
       }
       res.status(200).json(updatedCategoryData);
@@ -80,7 +83,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'No Category found with this ID, Please try again !' });
+      res.status(200).json({ message: 'No Category found with this ID, Please try again !' });
       return;
     }
     res.status(200).json({ message: 'Category Deleted!!!' });

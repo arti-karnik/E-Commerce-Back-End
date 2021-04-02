@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
       include: [{ model: Category, attributes:  ['id', 'category_name']}, { model: Tag ,as: "product_id" }],
     });
     if (!productData) {
-      res.status(404).json({ message: 'No Product found with this id!' });
+      res.status(200).json({ message: 'No Product found with this id!' });
       return;
     }
     res.status(200).json(productData);
@@ -78,7 +78,7 @@ router.put('/:id', (req, res) => {
       const findAllProductsWithId = await ProductTag.findAll({ where: { product_id: req.params.id } });
       console.log(findAllProductsWithId);
       if (findAllProductsWithId.length == 0) {
-        res.status(404).json({ message: 'No Product found with this id!' });
+        res.status(200).json({ message: 'No Product found with this id!' });
         return;
       }
       return findAllProductsWithId;
@@ -125,7 +125,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!productData) {
-      res.status(404).json({ message: 'No Product found with this id!' });
+      res.status(200).json({ message: 'No Product found with this id!' });
       return;
     } 
     res.status(200).json({ message: 'Product Deleted!!!' });

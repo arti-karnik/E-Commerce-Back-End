@@ -23,7 +23,7 @@ router.get('/:id',async (req, res) => {
     });
 
     if (!tagData) {
-      res.status(404).json({ message: 'No Product found with this id!' });
+      res.status(200).json({ message: 'No Product found with this id!' });
       return;
     }
     res.status(200).json(tagData);
@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
   })
   .then(async(tagData) => {
     if (!tagData) {
-      res.status(404).json({ message: 'No Product found with this id!' });
+      res.status(200).json({ message: 'No Product found with this id!' });
       return;
     }
     try {
@@ -59,7 +59,7 @@ router.put('/:id', async (req, res) => {
         include: [{ model: Product, as: "tag_id"}],
       });  
       if (!updateTagData) {
-        res.status(404).json({ message: 'No Product found with this id!' });
+        res.status(200).json({ message: 'No Product found with this id!' });
         return;
       }
       res.status(200).json(updateTagData);
@@ -82,7 +82,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!tagData) {
-      res.status(404).json({ message: 'No Tag found with this ID, Please try again !' });
+      res.status(200).json({ message: 'No Tag found with this ID, Please try again !' });
       return;
     }
     res.status(200).json({ message: 'Tag Deleted!!!' });
