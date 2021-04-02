@@ -85,7 +85,6 @@ $ node server.js <br>
 Open Insomnia to test routes 
 
 
-
 ## Contributor
 <strong> Github Profile: </strong> <br>
 https://github.com/arti-karnik
@@ -96,7 +95,9 @@ https://arti-karnik.github.io/MyPortfolioPage/
 ## codebase
 https://github.com/arti-karnik/E-Commerce-Back-End
 
+
 ## Application Walk-through
-https://drive.google.com/file/d/1P_LHeyXYdz-bCtFBbUG0dPZkm1z7T4Ht/view?usp=sharing
+<a href="https://drive.google.com/file/d/1P_LHeyXYdz-bCtFBbUG0dPZkm1z7T4Ht/view?usp=sharing" target="_blank"> Click here for Walk through video </a>
+
 
 
