@@ -18,34 +18,34 @@ Internet retail, also known as **e-commerce**, is the largest sector of the elec
 
 ## Description
 Application have 3 tables - 
-1. Product: 
-        ID (Primary key),
-        product_name (String),
-        price (decimal),
-        Stock (Integer),
-        category_id(References the 'Category' model's 'id')
+1. Product: <br>
+        ID (Primary key), <br>
+        product_name (String), <br>
+        price (decimal),<br>
+        Stock (Integer),<br>
+        category_id(References the 'Category' model's 'id')<br>
 
-2. Category
-        id (Primary key)
-        Category_name
+2. Category <br>
+        id (Primary key) <br>
+        Category_name <br>
 
     
-3. Tag
-        id (Primary key),
-        tag_name (String)
+3. Tag <br>
+        id (Primary key), <br>
+        tag_name (String) <br>
 
   
-4. ProductTag
-        id (Primary key),
-        product_id (Integer) References the 'Product' model's 'id',
-        tag_id (Integer)  References the 'Tag' model's 'id'.
+4. ProductTag <br>
+        id (Primary key), <br>
+        product_id (Integer) References the 'Product' model's 'id', <br>
+        tag_id (Integer)  References the 'Tag' model's 'id'. <br>
 
-Create a back-end for E-commerce application to demonstrate routes in Insomnia. 
-1.  GET routes to return all Categories, all Products, and all Tags 
-2.  GET By ID to return Product by ID, Category by ID & Tag by ID 
-3.  POST routes to create new Cateogry, Product and Tag
-4.  PUT routes to update Category, Product, Tag for given ID.
-5.  DELETE routes to delete Category, Product, Tag for given ID.
+Create a back-end for E-commerce application to demonstrate routes in Insomnia.  <br>
+1.  GET routes to return all Categories, all Products, and all Tags <br>
+2.  GET By ID to return Product by ID, Category by ID & Tag by ID <br>
+3.  POST routes to create new Cateogry, Product and Tag<br>
+4.  PUT routes to update Category, Product, Tag for given ID.<br>
+5.  DELETE routes to delete Category, Product, Tag for given ID.<br>
 
 ## Pre-requisite
 Install NodeJS 
