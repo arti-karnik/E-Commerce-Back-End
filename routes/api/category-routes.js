@@ -23,8 +23,8 @@ router.get('/:id', async (req, res) => {
       });
 
       if (!categoryData) {
-        res.status(200).json({ message: 'No Category found with this id!' });
-        return;
+      res.status(200).json({ message: 'No Category found with this id!' });
+      return;
       }
       res.status(200).json(categoryData);
   } 
@@ -46,11 +46,12 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
-  Category.update(req.body, {
-    where: {
-      id: req.params.id
-  } 
-  })
+    Category.update(req.body, {
+      where: {
+        id: req.params.id
+    } 
+})
+  
   .then(async (categoryData) => {
     if (!categoryData) {
       res.status(200).json({ message: 'No Category found with this id!' });
