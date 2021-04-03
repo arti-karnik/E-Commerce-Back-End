@@ -5,11 +5,11 @@
   * [Summary](#summary)
   * [Description](#description)
   * [Pre-requisite](#pre-requisite)
-  * [demo](#demo)
-  * [Technologyused:](#technologyused-)
-  * [Install:](#install-)
+  * [Demo](#demo)
+  * [Technologyused](#technologyused-)
+  * [Install](#install-)
   * [Contributor](#contributor)
-  * [codebase](#codebase)
+  * [Codebase](#codebase)
   * [Application Walk-through](#Application-walk-through)
 
 
@@ -50,7 +50,7 @@ Create a back-end for E-commerce application to demonstrate routes in Insomnia. 
 ## Pre-requisite
 Install NodeJS 
 
-## demo
+## Demo
 <img src="./assets/SS1.png">
 
 ![](./assets/GET.gif?raw=true)
@@ -92,7 +92,7 @@ https://github.com/arti-karnik
 <strong> Portfolio: </strong> <br>
 https://arti-karnik.github.io/MyPortfolioPage/
 
-## codebase
+## Codebase
 https://github.com/arti-karnik/E-Commerce-Back-End
 
 
